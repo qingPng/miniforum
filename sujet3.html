@@ -12,7 +12,6 @@
         <nav>
             <ul>
                <li><a href = "index.html">Accueil</a></li> 
-                <li><a href = "#sujets">Sujets</a></li>
             </ul>
         </nav>
     </header>
@@ -37,6 +36,22 @@
                 <p>Message_3</p>
             </article>
         </section>
+
+        <section>
+            <h3>Répondre à ce sujet</h3>
+
+            <form action ="/topics" method = "post">
+                <fieldset>
+                    <legend>Votre réponse</legend>
+                    <label for = "pseudo">Pseudo</label>
+                    <input type = "text" id ="pseudo" name = "pseudo" required placeholder="potato_01">
+                    <label for ="message">Message</label>
+                    <textarea id = "message" name ="message" required rows = "6" maxlength="500"></textarea>
+                </fieldset>
+                <button type ="submit">Publier</button>
+            </form>
+        </section>
+
     </main>
 
      <footer>
