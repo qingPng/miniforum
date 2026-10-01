@@ -63,6 +63,34 @@
                 <p></p>
             </article>
         </section>
+        <section>
+            <h2>Nouveau sujet</h2>
+            <form action ="/topics" method = "post">
+                <fieldset>
+                    <legend>Votre message</legend>
+                    <label for = "pseudo">Pseudo</label>
+                    <input type = "text" id ="pseudo" name = "pseudo" required placeholder="potato_01">
+                    <label for = "titre">Titre</label>
+                    <input type = "text" id = "titre" name ="titre" required maxlength="80">
+                    <label for ="message">Message</label>
+                    <textarea id = "message" name ="message" required rows = "6" maxlength="500"></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Options de publication </legend>
+                    <label for ="categorie">Catégorie</label>
+                    <select id = "categorie" name = "categorie">
+                        <option value = "general">Général</option>
+                        <option value = "aide">Aide</option>
+                        <option value = "projets">Projets</option>
+                    </select>
+                    <input type = "radio" id = "public" name = "visibilite" value ="public" checked>
+                    <label for ="public">Public</label>
+                    <input type ="radio" id ="private" name ="visibilite" value ="private">
+                    <label for ="private">Privé</label>
+                </fieldset>
+                <button type ="submit">Publier</button>
+            </form>
+        </section>
     </main>
 
     <footer>
