@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width = devide-width, initial-scale=1.0">
+    <title>MiniForum - Accueil</title>
+</head>
+<body>
+    <header>
+        <img src = "images/logo.svg" alt = "logo" style="width: 80px; height: 80px;">
+        <h1> MiniForum</h1>
+        <nav>
+            <ul>
+               <li><a href = "index.html">Accueil</a></li>
+               <li><a href ="inscription.html">inscription</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Connexion</h2>
+        <form action ="/connexion" method = "post">
+            <fieldset>
+                <legend>Vos identifiants</legend>
+
+                <label for="identifiant">Pseudo ou addresse e-mail</label>
+                <input type="text" id ="identifiant" name ="identifiant" required>
+                
+                <label for ="password">Mot de passe</label>
+                <input type = "password" id ="password" name = "password" required>
+
+                <input type="checkbox" id ="save" name ="save">
+                <label for ="save">Rester connecté sur cet appareil</label>
+            </fieldset>
+            <button type ="submit">Se connecter</button>
+            <a href ="inscription.html">Pas encore de compte ? S'inscrire</a>
+        </form>
+    </main>
+
+    <footer>
+       <p>MiniForum</p>
+       <p> Classe passerelle cfpt·i </p>
+    </footer>
+</body>
+</html>
