@@ -3,7 +3,7 @@
 /* Color palette:
 
 Text: #c4f0fa;
-Accent (link, button, title): #00d9ff
+Accent (link, button, title): #00f7ff
 Background color: #151a2e
 Card background: #2b2f55
 Border: #9b5cff
@@ -30,10 +30,33 @@ main
     padding: 0;
 }
 
-
-
-
 /* === 2. En-tete et navigation ======================== */
+
+.entete
+{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #151a2e;
+    color:#c4f0fa;
+    padding: 5px 30px;
+    border:2px solid #00f7ff ;
+
+}
+
+nav ul 
+{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav a
+{
+    color: #c4f0fa;
+    text-decoration: none;
+}
 
 /* === 3. Contenu principal ============================ */
 

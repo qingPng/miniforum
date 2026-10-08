@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class = "entete">
         <img src = "images/logo.svg" alt = "logo" style="width: 80px; height: 80px;">
         <h1> MiniForum</h1>
         <nav>
@@ -28,17 +28,17 @@
             <article>
                 <h4>Réponse_1</h4>
                 <p> <strong>auteur</strong>, date</p>
-                <p>Message_1</p>
+                <p class = "carte-message">Message_1</p>
             </article>
             <article>
                 <h4>Réponse_2</h4>
                 <p> <strong>auteur</strong>, date</p>
-                <p>Message_2</p>
+                <p class = "carte-message">Message_2</p>
             </article>
             <article>
                 <h4>Réponse_3</h4>
                 <p> <strong>auteur</strong>, date</p>
-                <p>Message_3</p>
+                <p class = "carte-message">Message_3</p>
             </article>
         </section>
 
@@ -53,13 +53,13 @@
                     <label for ="message">Message</label>
                     <textarea id = "message" name ="message" required rows = "6" maxlength="500"></textarea>
                 </fieldset>
-                <button type ="submit">Publier</button>
+                <button class = "bouton" type ="submit">Publier</button>
             </form>
         </section>
 
     </main>
 
-    <footer>
+    <footer class = "pied">
        <p>MiniForum</p>
        <p> Classe passerelle cfpt·i </p>
     </footer>

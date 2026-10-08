@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class = "entete">
         <img src = "images/logo.svg" alt = "logo" style="width: 80px; height: 80px;">
         <h1> MiniForum</h1>
         <nav>
             <ul>
                <li><a href = "index.html">Accueil</a></li>
-               <li><a href = "#sujets">Sujets récents</a></li>
-               <li><a href="sujets.html">Tous les sujets</a></li>
+               <li><a href = "#sujets">Récents</a></li>
+               <li><a href="sujets.html">Sujets</a></li>
                <li><a href ="inscription.html">Inscription</a></li>
                <li><a href = "connexion.html">Connexion</a></li>
             </ul>
@@ -53,19 +53,19 @@
                 </tr>
             </tbody>
         </table>
-        <section id = "sujets">
+        <section class = "liste-sujets" id = "sujets">
             <h2> Sujets récents</h2>
-            <article id = "sujet_1">
+            <article class = "carte-sujet" id = "sujet_1">
                 <h3><a href = "sujet1.html">Favorite anime character design ?</a></h3>
                 <strong>auteur</strong>, categorie
                 <p></p>
             </article>
-            <article id = "sujet_2">
+            <article class = "carte-sujet" id = "sujet_2">
                 <h3><a href = "sujet2.html">Show me your OCs !</a></h3>
                 <strong>auteur</strong>, categorie
                 <p></p>
             </article>
-            <article id = "sujet_3">
+            <article class = "carte-sujet" id = "sujet_3">
                 <h3><a href = "sujet3.html">How do draw hands pls TT</a></h3>
                 <strong>auteur</strong>, categorie
                 <p></p>
@@ -96,12 +96,12 @@
                     <input type ="radio" id ="private" name ="visibilite" value ="private">
                     <label for ="private">Privé</label>
                 </fieldset>
-                <button type ="submit">Publier</button>
+                <button class = "bouton" type ="submit">Publier</button>
             </form>
         </section>
     </main>
 
-    <footer>
+    <footer class = "pied">
        <p>MiniForum</p>
        <p> Classe passerelle cfpt·i </p>
     </footer>
