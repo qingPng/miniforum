@@ -1,4 +1,44 @@
+/* === 1. Reglages generaux ============================ */
+
+/* Color palette:
+
+Text: #c4f0fa;
+Accent (link, button, title): #00d9ff
+Background color: #151a2e
+Card background: #2b2f55
+Border: #9b5cff
+*/
+*
+{
+    box-sizing: border-box;
+}
+
 body
 {
-    background-color: aquamarine;
+    font-family: Andale Mono, monospace;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #c4f0fa;
+    background-color: #151a2e;
+    margin: 0;
 }
+
+main
+{
+    width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+
+
+/* === 2. En-tete et navigation ======================== */
+
+/* === 3. Contenu principal ============================ */
+
+/* === 4. Cartes de sujet ============================== */
+
+/* === 5. Formulaires ================================== */
+
+/* === 6. Pied de page ================================= */
