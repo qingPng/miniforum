@@ -3,9 +3,9 @@
 /* Color palette:
 
 Text: #c4f0fa;
-Accent (link, button, title): #00f7ff
+Accent (link, button, title): #00f7ff (cyan) #ff01aa (pink)
 Background color: #151a2e
-Card background: #2b2f55
+Card background: #24314e
 Border: #9b5cff
 */
 *
@@ -37,10 +37,11 @@ main
     display : flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #151a2e;
+    background-color: #24314e;
     color:#c4f0fa;
     padding: 5px 30px;
     border:2px solid #00f7ff ;
+    border-radius: 8px;
 
 }
 
@@ -52,16 +53,60 @@ nav ul
     margin: 0;
     padding: 0;
 }
+
 nav a
 {
-    color: #c4f0fa;
+    color: #ff01aa;
     text-decoration: none;
+}
+
+.pied
+{
+    background-color: #24314e;
+    text-align: center;
+    padding: 5px 0px;
 }
 
 /* === 3. Contenu principal ============================ */
 
 /* === 4. Cartes de sujet ============================== */
 
+.liste-sujets
+{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+.liste-sujets a
+{
+    color:#ff01aa;
+    text-decoration: none;
+}
+
+.carte-sujet
+{
+    background-color: #24314e  ;
+    border: 1px solid #00f7ff;
+    border-radius: 8px;
+    padding: 5px 20px;
+}
+
+.carte-sujet a
+{
+    font-size: 25px;
+    color:#ff01aa;
+    text-decoration: none;
+}
+
+.carte-message
+{
+    background-color: #24314e  ;
+    border: 1px solid #00f7ff;
+    border-radius: 8px;
+    padding: 5px 20px;
+}
 /* === 5. Formulaires ================================== */
 
 /* === 6. Pied de page ================================= */
