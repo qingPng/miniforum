@@ -26,33 +26,7 @@
     </header>
     
     <main>
-        <table>
-            <caption>Récapitulatif des sujets</caption>
-            <thead>
-                <tr>
-                    <th>sujet</th>
-                    <th>auteur</th>
-                    <th>nombre de réponses</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>sujet_1</td>
-                    <td>auteur_1</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>sujet_2</td>
-                    <td>auteur_2</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>sujet_3</td>
-                    <td>auteur_3</td>
-                    <td>0</td>
-                </tr>
-            </tbody>
-        </table>
+       
         <section class = "liste-sujets" id = "sujets">
             <h2> Sujets récents</h2>
             <article class = "carte-sujet" id = "sujet_1">
@@ -91,10 +65,12 @@
                         <option value = "aide">Aide</option>
                         <option value = "projets">Projets</option>
                     </select>
-                    <input type = "radio" id = "public" name = "visibilite" value ="public" checked>
+                    <div>
+                    <input class = "option" type = "radio" id = "public" name = "visibilite" value ="public" checked>
                     <label for ="public">Public</label>
-                    <input type ="radio" id ="private" name ="visibilite" value ="private">
+                    <input class = "option" type ="radio" id ="private" name ="visibilite" value ="private">
                     <label for ="private">Privé</label>
+                    </div>
                 </fieldset>
                 <button class = "bouton" type ="submit">Publier</button>
             </form>

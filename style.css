@@ -25,7 +25,8 @@ body
 
 main
 {
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0;
 }
@@ -108,5 +109,58 @@ nav a
     padding: 5px 20px;
 }
 /* === 5. Formulaires ================================== */
+
+input, textarea, select, button 
+{
+    font-family: inherit;
+}
+label
+{
+    display: block;
+    margin: 5px;
+}
+
+textarea
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #00f7ff;
+    border-radius: 8px;
+    background-color: #24314e;
+    color: #c4f0fa;
+    resize: vertical;
+}
+
+input
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #00f7ff;
+    border-radius: 8px;
+    background-color: #24314e;
+    color: #c4f0fa;
+}
+
+.option
+{
+    width: auto;
+    margin: 20px 0;
+}
+.option + label
+{
+    
+    display: inline;
+}
+
+.bouton
+{
+    background-color: #00f7ff;
+    color:#151a2e;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 15px;
+}
+
 
 /* === 6. Pied de page ================================= */
