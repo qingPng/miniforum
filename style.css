@@ -80,7 +80,7 @@ nav a
     margin: 0;
     padding: 0;
 }
-.liste-sujets a
+.liste-sujets a, .inscription 
 {
     color:#ff01aa;
     text-decoration: none;
@@ -145,10 +145,10 @@ input
 {
     width: auto;
     margin: 20px 0;
+    accent-color: #9854ff;
 }
 .option + label
 {
-    
     display: inline;
 }
 
@@ -161,6 +161,8 @@ input
     cursor: pointer;
     margin: 15px;
 }
+
+
 
 
 /* === 6. Pied de page ================================= */
