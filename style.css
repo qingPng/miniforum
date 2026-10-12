@@ -4,7 +4,7 @@
 
 Text: #c4f0fa;
 Accent (link, button, title): #00f7ff (cyan) #ff01aa (pink)
-Background color: #151a2e
+Background color: #191e34
 Card background: #24314e
 Border: #9b5cff
 */
@@ -19,7 +19,7 @@ body
     font-size: 16px;
     line-height: 1.6;
     color: #c4f0fa;
-    background-color: #151a2e;
+    background-color: #191e34;
     margin: 0;
 }
 
@@ -57,8 +57,10 @@ nav ul
 
 nav a
 {
-    color: #ff01aa;
+    color: #ff1493;
     text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
 }
 
 .pied
@@ -82,8 +84,9 @@ nav a
 }
 .liste-sujets a, .inscription 
 {
-    color:#ff01aa;
+    color:#ff1493;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .carte-sujet
@@ -97,7 +100,7 @@ nav a
 .carte-sujet a
 {
     font-size: 25px;
-    color:#ff01aa;
+    color:#ff1493;
     text-decoration: none;
 }
 
@@ -145,7 +148,7 @@ input
 {
     width: auto;
     margin: 20px 0;
-    accent-color: #9854ff;
+    accent-color: #c77dff;
 }
 .option + label
 {
@@ -166,3 +169,34 @@ input
 
 
 /* === 6. Pied de page ================================= */
+
+/* === 7. Etats interactifs ============================ */
+nav a:hover,
+.liste-sujets a:hover,
+.inscription:hover,
+.carte-sujet a:hover
+{
+    color: #c8ff00;
+}
+
+.bouton:hover
+{
+    background-color: #c8ff00;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible
+{
+    outline: 3px solid #c77dff;
+    outline-offset: 2px;
+}
+
+input:focus,
+textarea:focus,
+select:focus
+{
+    border-color: #ff1493;
+}
