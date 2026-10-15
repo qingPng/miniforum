@@ -1,13 +1,24 @@
 /* === 1. Reglages generaux ============================ */
+:root
+{
+/* Color palette: */
 
-/* Color palette:
+--text: #c4f0fa;
+--accent-cyan: #00f7ff;
+--accent-pink:#ff1493;
+--accent-yellow:#c8ff00;
+--accent-purple: #9b5cff;
+--background: #191e34;
+--card-background: #24314e;
 
-Text: #c4f0fa;
-Accent (link, button, title): #00f7ff (cyan) #ff01aa (pink)
-Background color: #191e34
-Card background: #24314e
-Border: #9b5cff
-*/
+--space-small: 0.5rem;
+--space-medium: 1rem;
+--space-large: 1.5rem;
+--space-xl: 2rem;
+
+--radius: 0.5rem;
+}
+
 *
 {
     box-sizing: border-box;
@@ -16,10 +27,10 @@ Border: #9b5cff
 body
 {
     font-family: Andale Mono, monospace;
-    font-size: 16px;
+    font-size: var(--space-medium);
     line-height: 1.6;
-    color: #c4f0fa;
-    background-color: #191e34;
+    color: var(--text);
+    background-color: var(--background);
     margin: 0;
 }
 
@@ -38,18 +49,18 @@ main
     display : flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #24314e;
-    color:#c4f0fa;
-    padding: 5px 30px;
-    border:2px solid #00f7ff ;
-    border-radius: 8px;
+    background-color: var(--card-background);
+    color:var(--text);
+    padding: var(--space-small) var(--space-xl);
+    border:2px solid var(--accent-cyan);
+    border-radius: var(--radius);
 
 }
 
 nav ul 
 {
     display: flex;
-    gap: 20px;
+    gap: var(--space-large);
     list-style: none;
     margin: 0;
     padding: 0;
@@ -57,17 +68,17 @@ nav ul
 
 nav a
 {
-    color: #ff1493;
+    color: var(--accent-pink);
     text-decoration: none;
-    font-size: 23px;
+    font-size: var(--space-large);
     font-weight: bold;
 }
 
 .pied
 {
-    background-color: #24314e;
+    background-color: var(--card-background);
     text-align: center;
-    padding: 5px 0px;
+    padding: var(--space-small) 0px;
 }
 
 /* === 3. Contenu principal ============================ */
@@ -78,38 +89,38 @@ nav a
 {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--space-medium);
     margin: 0;
     padding: 0;
 }
 .liste-sujets a, .inscription 
 {
-    color:#ff1493;
+    color:var(--accent-pink);
     text-decoration: none;
     font-weight: bold;
 }
 
 .carte-sujet
 {
-    background-color: #24314e  ;
-    border: 1px solid #00f7ff;
-    border-radius: 8px;
-    padding: 5px 20px;
+    background-color: var(--card-background)  ;
+    border: 1px solid var(--accent-cyan);
+    border-radius: var(--radius);
+    padding: var(--space-small) var(--space-large);
 }
 
 .carte-sujet a
 {
-    font-size: 25px;
-    color:#ff1493;
+    font-size: var(--space-large);
+    color:var(--accent-pink);
     text-decoration: none;
 }
 
 .carte-message
 {
-    background-color: #24314e  ;
-    border: 1px solid #00f7ff;
-    border-radius: 8px;
-    padding: 5px 20px;
+    background-color: var(--card-background);
+    border: 1px solid var(--accent-cyan);
+    border-radius: var(--radius);
+    padding: var(--space-small) var(--space-large);
 }
 /* === 5. Formulaires ================================== */
 
@@ -126,29 +137,29 @@ label
 textarea
 {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #00f7ff;
-    border-radius: 8px;
-    background-color: #24314e;
-    color: #c4f0fa;
+    padding: var(--space-small);
+    border: 1px solid var(--accent-cyan);
+    border-radius: var(--radius);
+    background-color: var(--card-background);
+    color: var(--text);
     resize: vertical;
 }
 
 input
 {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #00f7ff;
-    border-radius: 8px;
-    background-color: #24314e;
-    color: #c4f0fa;
+    padding: var(--space-small);
+    border: 1px solid var(--accent-cyan);
+    border-radius: var(--radius);
+    background-color: var(--card-background);
+    color: var(--text);
 }
 
 .option
 {
     width: auto;
-    margin: 20px 0;
-    accent-color: #c77dff;
+    margin: var(--space-large) 0;
+    accent-color: var(--accent-purple);
 }
 .option + label
 {
@@ -157,12 +168,12 @@ input
 
 .bouton
 {
-    background-color: #00f7ff;
-    color:#151a2e;
-    padding: 10px 20px;
-    border-radius: 8px;
+    background-color: var(--accent-cyan);
+    color:var(--background);
+    padding: var(--space-small) var(--space-large);
+    border-radius: var(--radius);
     cursor: pointer;
-    margin: 15px;
+    margin: var(--space-medium);
 }
 
 
@@ -176,12 +187,12 @@ nav a:hover,
 .inscription:hover,
 .carte-sujet a:hover
 {
-    color: #c8ff00;
+    color: var(--accent-yellow);
 }
 
 .bouton:hover
 {
-    background-color: #c8ff00;
+    background-color: var(--accent-yellow);
 }
 
 a:focus-visible,
@@ -190,7 +201,7 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible
 {
-    outline: 3px solid #c77dff;
+    outline: 3px solid var(--accent-purple);
     outline-offset: 2px;
 }
 
@@ -198,5 +209,5 @@ input:focus,
 textarea:focus,
 select:focus
 {
-    border-color: #ff1493;
+    border-color: var(--accent-pink);
 }
