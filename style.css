@@ -43,7 +43,7 @@ body
 main
 {
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0;
 }
@@ -105,6 +105,27 @@ nav a
 
 /* === 3. Contenu principal ============================ */
 
+.zone-sujet
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+}
+
+.fil-messages
+{
+    flex: 1 1 24rem;
+}
+
+.info-sujet
+{
+    flex: 0 0 16rem;
+    height: fit-content;
+    background-color: var(--card-background)  ;
+    border: 1px solid var(--accent-cyan);
+    border-radius: var(--radius);
+    padding: var(--space-small) var(--space-large);
+}
 /* === 4. Cartes de sujet ============================== */
 
 .liste-sujets
