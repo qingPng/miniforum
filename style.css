@@ -42,7 +42,7 @@ body
 
 main
 {
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
@@ -101,6 +101,7 @@ nav a
     background-color: var(--card-background);
     text-align: center;
     padding: var(--space-small) 0px;
+    margin-top: var(--space-large);
 }
 
 /* === 3. Contenu principal ============================ */
