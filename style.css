@@ -10,6 +10,7 @@
 --accent-purple: #9b5cff;
 --background: #191e34;
 --card-background: #24314e;
+--header: #24314e;
 
 --space-small: 0.5rem;
 --space-medium: 1rem;
@@ -50,13 +51,33 @@ main
 
 /* === 2. En-tete et navigation ======================== */
 
+.logo-wrap
+{
+display: inline-grid;
+  place-items: center;
+  padding: 12px;
+  border-radius: 14px;
+  background: radial-gradient(
+    circle,
+    var(--text) 60%,
+    transparent 62%
+  );
+
+}
+
+.logo-wrap img
+{
+    width: 90px;
+    height: 90px;
+}
+
 .entete
 {
     display : flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--card-background);
+    background-color: var(--header);
     color:var(--text);
     padding: var(--space-small) var(--space-xl);
     border:2px solid var(--accent-cyan);
@@ -98,7 +119,7 @@ nav a
 
 .pied
 {
-    background-color: var(--card-background);
+    background-color: var(--header);
     text-align: center;
     padding: var(--space-small) 0px;
     margin-top: var(--space-large);
