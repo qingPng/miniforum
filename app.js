@@ -1,5 +1,1 @@
-const btn = document.getElementById('btn');
-
-btn.addEventListener('click', ()=> {
-    alert('Bonjour depuis Javascript !')
-});
+console.log("app.js chargé");
