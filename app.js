@@ -33,7 +33,33 @@ function titleExist(title, input)
     return false;
 }
 
+function titleValidation(title, input)
+{
+
+    const trimmedTitle = input.trim();
+
+    if(trimmedTitle === "")
+    {
+        return "Le titre est obligatoire."
+    }
+    if(trimmedTitle.length < LONGUEUR_MIN)
+    {
+        return "Le titre doit faire au moins " + LONGUEUR_MIN + " caractères."
+    }
+    if(trimmedTitle.length > LONGUEUR_MAX)
+    {
+        return "le titre ne doit pas dépasser " + LONGUEUR_MAX + " caractères."
+    }
+    if(titleExist(title, input) === true)
+    {
+        return "Ce sujet existe déjà."
+    }
+
+    return "";
+}
+
 console.log(titleSorted);
 console.log(title[0]);
 console.log(searchInTitle(title, "draw"));
-console.log(titleExist(title, "show me your ocs !"));  
+console.log(titleExist(title, "show me your ocs !"));
+console.log(titleValidation(title, "SHOW ME YOUR OCS !"))  
