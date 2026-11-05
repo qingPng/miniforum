@@ -3,7 +3,7 @@ console.log("app.js chargé");
 const LONGUEUR_MIN = 5;
 const LONGUEUR_MAX = 80;
 
-const title =
+const titles =
 [
     "Favorite anime character design ?",
     "Show me your OCs !",
@@ -13,9 +13,9 @@ const title =
     "Commission open ! (pls I need money)"
 ]
 
-console.table(title);
+console.table(titles);
 
-const titleSorted = [...title].sort((a,b) => a.localeCompare(b));
+const titleSorted = [...titles].sort((a,b) => a.localeCompare(b));
 
 function searchInTitle(title, text)
 {
@@ -58,8 +58,37 @@ function titleValidation(title, input)
     return "";
 }
 
-console.log(titleSorted);
-console.log(title[0]);
-console.log(searchInTitle(title, "draw"));
-console.log(titleExist(title, "show me your ocs !"));
-console.log(titleValidation(title, "SHOW ME YOUR OCS !"))  
+
+
+function subjectCard(title)
+{
+    const card = document.createElement("article");
+    card.classList.add("carte-sujet");
+
+    const h3 = document.createElement("h3");
+    h3.textContent = title;
+
+    card.append(h3);
+    return card;
+}
+
+function displaySubject(list)
+{
+    const section = document.querySelector("#sujets");
+
+    if(section === null)
+    {
+        return;
+    }
+    document.querySelectorAll(".carte-sujet").forEach((element) => element.remove());
+
+    for (const title of list)
+    {
+        section.append(subjectCard(title));
+    }
+}
+
+if (document.querySelector("#sujets")!== null)
+{
+    displaySubject(titles);
+}
