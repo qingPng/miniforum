@@ -88,7 +88,49 @@ function displaySubject(list)
     }
 }
 
-if (document.querySelector("#sujets")!== null)
+function displayError(idMessage, text)
 {
-    displaySubject(titles);
+    const message = document.querySelector("#" + idMessage);
+    message.textContent = text;
 }
+
+function startup()
+{
+    const form = document.querySelector("#form-nouveau-sujet");
+    const titleField = document.querySelector("#titre");
+
+   
+    if (document.querySelector("#sujets")!== null)
+    {
+        displaySubject(titles);
+    }
+
+     if (form !== null)
+    {
+        form.addEventListener("submit", function(event)
+        {
+            event.preventDefault();
+
+            const title = titleField.value;
+            const error = titleValidation(titles, title);
+
+            if(error !== "")
+        {
+            displayError("erreur-titre", error);
+            return;
+        }
+
+        displayError("erreur-titre", "");
+        titles.push(title.trim());
+        displaySubject(titles);
+        form.reset();
+        titleField.focus();
+
+
+        });
+
+        
+    }
+}
+startup();
+
