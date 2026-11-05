@@ -32,33 +32,21 @@
        
         <section class = "liste-sujets" id = "sujets">
             <h2> Sujets récents</h2>
-            <article class = "carte-sujet" id = "sujet_1">
-                <h3><a href = "sujet1.html">Favorite anime character design ?</a></h3>
-                <strong>auteur</strong>, categorie
-                <p></p>
-            </article>
-            <article class = "carte-sujet" id = "sujet_2">
-                <h3><a href = "sujet2.html">Show me your OCs !</a></h3>
-                <strong>auteur</strong>, categorie
-                <p></p>
-            </article>
-            <article class = "carte-sujet" id = "sujet_3">
-                <h3><a href = "sujet3.html">How do draw hands pls TT</a></h3>
-                <strong>auteur</strong>, categorie
-                <p></p>
-            </article>
         </section>
         <section>
             <h2>Nouveau sujet</h2>
-            <form action ="/topics" method = "post">
+            <form id ="form-nouveau-sujet" action ="/topics" method = "post" novalidate>
                 <fieldset>
                     <legend>Votre message</legend>
                     <label for = "pseudo">Pseudo</label>
                     <input type = "text" id ="pseudo" name = "pseudo" required placeholder="potato_01">
+                    <p class="message-erreur" id="erreur-pseudo"></p>
                     <label for = "titre">Titre</label>
                     <input type = "text" id = "titre" name ="titre" required maxlength="80">
+                    <p class="message-erreur" id="erreur-titre"></p>
                     <label for ="message">Message</label>
                     <textarea id = "message" name ="message" required rows = "6" maxlength="500"></textarea>
+                    <p class="message-erreur" id="erreur-message"></p>
                 </fieldset>
                 <fieldset>
                     <legend>Options de publication </legend>
