@@ -2,6 +2,7 @@ console.log("app.js chargé");
 
 const LONGUEUR_MIN = 5;
 const LONGUEUR_MAX = 80;
+const MESSAGE_MAX = 500;
 
 const titles =
 [
@@ -58,6 +59,30 @@ function titleValidation(title, input)
     return "";
 }
 
+function nicknameValidation(input)
+{
+    const nickname = input.trim();
+
+    if (nickname === "")
+    {
+        return "Le pseudo est obligatoire."
+    }
+    return "";
+}
+
+function messageValidation(input)
+{
+    const message = input.trim();
+    if(message === "")
+    {
+        return "Le message est obligatoire."
+    }
+    if(message.length > MESSAGE_MAX)
+    {
+        return "Le message ne doit pas dépasser " + MESSAGE_MAX + "caractères."
+    }
+    return "";
+}
 
 
 function subjectCard(title)
@@ -98,6 +123,8 @@ function startup()
 {
     const form = document.querySelector("#form-nouveau-sujet");
     const titleField = document.querySelector("#titre");
+    const nicknameField = document.querySelector("#pseudo");
+    const messageField = document.querySelector("#message");
 
    
     if (document.querySelector("#sujets")!== null)
@@ -112,13 +139,18 @@ function startup()
             event.preventDefault();
 
             const title = titleField.value;
-            const error = titleValidation(titles, title);
+            const titleError = titleValidation(titles, titleField.value);
+            const nicknameError = nicknameValidation(nicknameField.value);
+            const messageError = messageValidation(messageField.value);
 
-            if(error !== "")
-        {
-            displayError("erreur-titre", error);
-            return;
-        }
+            displayError("erreur-pseudo", nicknameError);
+            displayError("erreur-titre", titleError);
+            displayError("erreur-message", messageError);
+
+            if (nicknameError !== "" || titleError !== "" || messageError !== "")
+            {
+                return;
+            }
 
         displayError("erreur-titre", "");
         titles.push(title.trim());
